@@ -5,6 +5,12 @@ const port = new SerialPort({
     path: process.argv[2],
     baudRate: 115200,
     autoOpen: false,
+    parity: "none",
+    xoff: false,
+    xon: false,
+    rtsMode: "handshake",
+    dataBits: 8,
+    stopBits: 1,
 });
 
 port.open(() => {
