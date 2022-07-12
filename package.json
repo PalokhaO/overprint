@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/PalokhaO/overprint/issues"
   },
-  "homepage": "https://github.com/PalokhaO/overprint#readme"
+  "homepage": "https://github.com/PalokhaO/overprint#readme",
+  "dependencies": {
+    "serialport": "^10.4.0"
+  }
 }

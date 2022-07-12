@@ -1,8 +1,10 @@
-import * as readline from 'node:readline';
-import { stdin, stdout, argv } from 'node:process';
-import { createReadStream } from 'node:fs';
+import { SerialPort } from "serialport"
+import * as readline from "readline";
 
-const port = argv[2];
+const port = new SerialPort({
+    path: process.argv[2],
+    baudRate: 115200,
+});
 
-const rl = readline.createInterface({input: createReadStream(port).resume() });
-rl.on('line', line => console.log(line));
+const rl = readline.createInterface(port);
+rl.on("line", console.log);
