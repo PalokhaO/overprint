@@ -1,11 +1,8 @@
-import { appendFileSync, createReadStream, writeFileSync, writeSync } from "fs";
+import * as readline from 'node:readline';
+import { stdin, stdout, argv } from 'node:process';
+import { createReadStream } from 'node:fs';
 
-const port = process.argv[2];
+const port = argv[2];
 
-const stream = createReadStream(port, {
-    autoClose: false,
-});
-
-stream.on("data", data => writeSync(0, data));
-
-appendFileSync(port, "M105");
+const rl = readline.createInterface({ input: createReadStream(port) });
+rl.on('line', line => console.log(line));
