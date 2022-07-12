@@ -4,5 +4,5 @@ import { createReadStream } from 'node:fs';
 
 const port = argv[2];
 
-const rl = readline.createInterface({ input: createReadStream(port) });
+const rl = readline.createInterface({input: createReadStream(port).resume() });
 rl.on('line', line => console.log(line));
