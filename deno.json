@@ -1,0 +1,24 @@
+{
+  "fmt": {
+    "files": {
+      "include": [],
+      "exclude": []
+    },
+    "options": {}
+  },
+  "lint": {
+    "files": {
+      "include": [],
+      "exclude": []
+    },
+    "rules": {
+      "tags": [],
+      "include": [],
+      "exclude": []
+    }
+  },
+  "tasks": {
+    "god": "deno run --allow-read --allow-write --allow-net"
+  },
+  "compilerOptions": {}
+}
