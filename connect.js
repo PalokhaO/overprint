@@ -16,4 +16,5 @@ const port = new SerialPort({
 port.open(() => {
     const rl = readline.createInterface(port);
     rl.on("line", console.log);
+    port.write("M105\n");
 });
